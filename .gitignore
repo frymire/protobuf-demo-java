@@ -1,15 +1,15 @@
- *.class
- +target
+*.class
+target
   
-  # Mobile Tools for Java (J2ME)
-  .mtj.tmp/
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
   
- +#Eclipse
- +.settings
- +target
- +.classpath
- +.project
- +
-  # Package Files #
-  *.jar
-  *.war
+#Eclipse
+.settings
+target
+.classpath
+.project
+
+# Package Files #
+*.jar
+*.war
