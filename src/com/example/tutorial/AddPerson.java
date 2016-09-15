@@ -36,6 +36,6 @@ class AddPerson {
     
     System.out.println("Done. Run ListPeople.java to see the result.");
     
-  } // main
+  }
   
 }

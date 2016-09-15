@@ -4,6 +4,9 @@ package tutorial;
 option java_package = "com.example.tutorial";
 option java_outer_classname = "AddressBookProtos";
 
+// Use CamelCase for Message names. 
+// Use underscore_separated_names for field names (i.e. song_name).
+
 message Person {
   string name = 1;
   int32 id = 2;  // Unique ID number for this person.
