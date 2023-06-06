@@ -2,10 +2,6 @@ package com.example.tutorial;
 
 import java.io.FileOutputStream;
 
-import com.example.tutorial.AddressBookProtos.AddressBook;
-import com.example.tutorial.AddressBookProtos.Person;
-
-
 class AddPerson {
 
   // Create an address book in file "MyAddressBook" with two entries.
@@ -35,7 +31,5 @@ class AddPerson {
     }
     
     System.out.println("Done. Run ListPeople.java to see the result.");
-    
   }
-  
 }

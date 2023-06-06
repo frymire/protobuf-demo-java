@@ -1,13 +1,8 @@
-// UNCLASSIFIED
-
 package com.example.tutorial;
-
-import com.example.tutorial.AddressBookProtos.Person;
 
 /**
  * Since you're not supposed to edit person directly, we have to make another Person-like
  * class that contains a Person instance and gives it functionality.
- *
  */
 public class PersonPlus {
   
@@ -41,7 +36,6 @@ public class PersonPlus {
       sb.append(phoneNumber.getNumber() + "\n");
     }
 
-    
     return sb.toString();
   }
 
