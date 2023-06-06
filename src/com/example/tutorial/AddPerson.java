@@ -1,5 +1,8 @@
 package com.example.tutorial;
 
+import com.google.protobuf.Struct;
+import com.google.protobuf.util.JsonFormat;
+
 import java.io.FileOutputStream;
 
 class AddPerson {
@@ -7,6 +10,7 @@ class AddPerson {
   // Create an address book in file "MyAddressBook" with two entries.
   public static void main(String[] args) throws Exception {
 
+    // Instantiate a Person using the Person.Builder
     Person mark = Person.newBuilder()
         .setId(1)
         .setName("Mark")
@@ -16,11 +20,11 @@ class AddPerson {
         .addPhones( Person.PhoneNumber.newBuilder().setNumber("777-888-9999").setType(Person.PhoneType.WORK) )
         .build();  
 
-    Person kurt = Person.newBuilder()
-        .setId(2)
-        .setName("Kurt")
-        .setEmail("kurt@server.com")
-        .build();
+    // Instantiate a Person by parsing from JSON
+    String json = """
+            { "id": 2, "name": "Kurt", "email": "kurt@server.com" }""";
+    Person.Builder kurt = Person.newBuilder();
+    JsonFormat.parser().merge(json, kurt);
 
     AddressBook.Builder addressBook = AddressBook.newBuilder()
         .addPeople(mark)
